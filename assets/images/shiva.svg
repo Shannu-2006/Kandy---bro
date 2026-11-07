@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Nebula Gradients -->
+    <radialGradient id="skyAtmosphere" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#0f172a" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#050814" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#020308" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Divine Halo Aura behind Shiva -->
+    <radialGradient id="shivaHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.95" />
+      <stop offset="25%" stop-color="#eab308" stop-opacity="0.7" />
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#0284c7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Himalayan Snow Gradients -->
+    <linearGradient id="snowPeak" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#e0f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="snowGround" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="50%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Shiva Divine Blue Body -->
+    <linearGradient id="shivaBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="45%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+
+    <!-- Gold Metallic -->
+    <linearGradient id="goldMat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+
+    <!-- Nandi Pure White Bull -->
+    <linearGradient id="nandiSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <filter id="divineGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. Cosmic Sky -->
+  <rect width="1600" height="1000" fill="url(#skyAtmosphere)" />
+
+  <!-- Stars & Celestial Dust -->
+  <g fill="#e0f2fe" opacity="0.65">
+    <circle cx="150" cy="120" r="1.5" /><circle cx="280" cy="80" r="1.2" />
+    <circle cx="420" cy="220" r="2" /><circle cx="580" cy="110" r="1.5" />
+    <circle cx="800" cy="70" r="2.5" /><circle cx="1050" cy="140" r="1.5" />
+    <circle cx="1250" cy="90" r="2" /><circle cx="1450" cy="180" r="1.5" />
+    <circle cx="200" cy="300" r="1" /><circle cx="1380" cy="320" r="1.2" />
+  </g>
+
+  <!-- 2. Mount Kailash & Himalayan Snow Peaks -->
+  <!-- Back peaks -->
+  <polygon points="0,750 300,380 600,680 800,240 1050,650 1350,340 1600,720 1600,1000 0,1000" fill="#0f172a" opacity="0.85" />
+  <!-- Central Kailash Sacred Peak with Snow Glaciers -->
+  <polygon points="450,700 800,240 1150,700" fill="url(#snowPeak)" opacity="0.95" />
+  <polygon points="760,240 800,240 840,320 800,360 760,320" fill="#ffffff" filter="url(#divineGlow)" opacity="0.8" />
+  
+  <!-- Side snow slopes -->
+  <polygon points="0,650 250,420 500,750" fill="url(#snowPeak)" opacity="0.6" />
+  <polygon points="1100,720 1350,380 1600,660" fill="url(#snowPeak)" opacity="0.6" />
+
+  <!-- Snow-covered Plateau Foreground -->
+  <path d="M0,720 Q400,680 800,680 Q1200,680 1600,720 L1600,1000 L0,1000 Z" fill="url(#snowGround)" />
+  <ellipse cx="800" cy="740" rx="650" ry="80" fill="#ffffff" opacity="0.4" />
+
+  <!-- 3. Divine Halo Behind Lord Shiva -->
+  <circle cx="800" cy="460" r="260" fill="url(#shivaHalo)" />
+
+  <!-- =================================================================== -->
+  <!-- 4. NANDI THE SACRED BULL (Sitting faithfully beside Shiva on left)   -->
+  <!-- =================================================================== -->
+  <g transform="translate(320, 560)">
+    <!-- Shadow on Snow -->
+    <ellipse cx="140" cy="220" rx="150" ry="35" fill="#020617" opacity="0.4" />
+
+    <!-- Nandi Body (Lying down in peaceful reverence) -->
+    <path d="M40,160 C30,120 70,80 140,80 C210,80 250,110 260,160 C265,190 240,220 150,220 C60,220 35,190 40,160 Z" fill="url(#nandiSkin)" />
+    <!-- Front crossed hooves -->
+    <ellipse cx="230" cy="205" rx="30" ry="15" fill="#e2e8f0" />
+    <path d="M235,210 L250,210" stroke="#475569" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Sacred Hump (Kakud) of Nandi -->
+    <path d="M80,95 C75,50 120,45 130,90 Z" fill="url(#nandiSkin)" />
+
+    <!-- Nandi Head and Muzzle -->
+    <!-- Head tilted peacefully toward Shiva -->
+    <path d="M190,110 C190,80 230,70 250,90 C265,105 270,130 250,145 C230,155 190,140 190,110 Z" fill="url(#nandiSkin)" />
+    <!-- Muzzle / Nose -->
+    <ellipse cx="260" cy="125" rx="14" ry="12" fill="#94a3b8" />
+    <circle cx="265" cy="122" r="3" fill="#1e293b" />
+    <!-- Peaceful eye -->
+    <path d="M225,95 Q235,90 245,98" stroke="#1e293b" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <!-- Horns -->
+    <path d="M205,75 C200,45 210,35 220,40 C218,55 215,65 212,75 Z" fill="#475569" />
+    <path d="M225,75 C225,45 235,35 245,40 C240,55 235,65 232,75 Z" fill="#475569" />
+    <!-- Ears -->
+    <ellipse cx="195" cy="90" rx="16" ry="7" transform="rotate(-20 195 90)" fill="#e2e8f0" />
+
+    <!-- Golden Bell Collar & Ornaments -->
+    <path d="M200,120 Q225,150 250,130" stroke="#f59e0b" stroke-width="7" fill="none" />
+    <circle cx="225" cy="148" r="9" fill="url(#goldMat)" />
+    <!-- Holy Tripundra on Nandi's forehead -->
+    <line x1="225" y1="80" x2="240" y2="80" stroke="#f8fafc" stroke-width="1.5" />
+    <line x1="225" y1="83" x2="240" y2="83" stroke="#f8fafc" stroke-width="1.5" />
+    <circle cx="232" cy="81.5" r="1.5" fill="#dc2626" />
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 5. LORD SHIVA (Sitting peacefully in Dhyana Mudra on Mount Kailash)  -->
+  <!-- =================================================================== -->
+  <g transform="translate(800, 520)" filter="url(#divineGlow)">
+    
+    <!-- Tiger Pelt Seat (Vyaghracharma) on the Snow -->
+    <ellipse cx="0" cy="190" rx="210" ry="40" fill="#b45309" opacity="0.8" />
+    <path d="M-190,185 C-120,165 120,165 190,185 C210,215 150,230 0,230 C-150,230 -210,215 -190,185 Z" fill="#d97706" />
+
+    <!-- Folded Legs in Padmasana (Lotus Posture) -->
+    <path d="M-160,150 C-120,90 -40,110 0,110 C40,110 120,90 160,150 C170,180 120,200 0,200 C-120,200 -170,180 -160,150 Z" fill="url(#shivaBody)" />
+    <ellipse cx="0" cy="145" rx="50" ry="25" fill="#0369a1" />
+
+    <!-- Meditating Hands in Chin Mudra resting on lap -->
+    <ellipse cx="-40" cy="130" rx="22" ry="14" fill="url(#shivaBody)" />
+    <ellipse cx="40" cy="130" rx="22" ry="14" fill="url(#shivaBody)" />
+
+    <!-- Torso and Broad Shoulders (Neelakantha) -->
+    <path d="M-90,-40 C-90,-100 -40,-80 0,-80 C40,-80 90,-100 90,-40 L100,90 C100,130 -100,130 -100,90 Z" fill="url(#shivaBody)" />
+
+    <!-- Sacred Snake (Vasuki) gracefully coiled around Shiva's Neck -->
+    <path d="M-45,-70 C-40,-95 40,-95 45,-70 C50,-50 -50,-50 -45,-70" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round" />
+    <!-- Snake Hood raised gently on His shoulder -->
+    <path d="M52,-70 C65,-85 70,-100 60,-105 C50,-108 45,-90 48,-75 Z" fill="#16a34a" />
+    <circle cx="58" cy="-98" r="2.5" fill="#fef08a" />
+
+    <!-- Rudraksha Malas on Neck and Arms -->
+    <path d="M-50,-45 Q0,10 50,-45" fill="none" stroke="#b45309" stroke-width="5" stroke-dasharray="4 6" />
+    <path d="M-80,-20 Q-65,0 -80,20" fill="none" stroke="#b45309" stroke-width="4" stroke-dasharray="3 5" />
+    <path d="M80,-20 Q65,0 80,20" fill="none" stroke="#b45309" stroke-width="4" stroke-dasharray="3 5" />
+
+    <!-- Peaceful Divine Head & Face -->
+    <circle cx="0" cy="-140" r="45" fill="url(#shivaBody)" />
+    <!-- Matted Hair (Jata Mukuta) -->
+    <path d="M-35,-165 C-35,-240 35,-240 35,-165 Z" fill="#0f172a" />
+    <ellipse cx="0" cy="-210" rx="30" ry="25" fill="#1e293b" />
+
+    <!-- Holy River Ganga descending gracefully from Jata -->
+    <path d="M22,-220 Q70,-210 80,-150 Q90,-80 75,-10" fill="none" stroke="#38bdf8" stroke-width="5" opacity="0.85" filter="url(#divineGlow)" />
+
+    <!-- Crescent Moon (Chandrama) in Jata -->
+    <path d="M-15,-200 C-5,-215 15,-210 20,-190 C12,-198 0,-198 -10,-192 Z" fill="#ffffff" filter="url(#divineGlow)" />
+
+    <!-- Sacred Tripundra on Forehead with Glowing Trinetra (Third Eye) -->
+    <line x1="-16" y1="-155" x2="16" y2="-155" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="-16" y1="-150" x2="16" y2="-150" stroke="#ffffff" stroke-width="2.5" />
+    <line x1="-16" y1="-145" x2="16" y2="-145" stroke="#ffffff" stroke-width="2.5" />
+    <!-- Vertical Third Eye in Center glowing gold -->
+    <ellipse cx="0" cy="-150" rx="3.5" ry="7" fill="#f59e0b" filter="url(#divineGlow)" />
+    <circle cx="0" cy="-150" r="1.5" fill="#ffffff" />
+
+    <!-- Calm, Closed Meditative Eyes & Peaceful Smile -->
+    <path d="M-24,-136 Q-14,-130 -4,-136" fill="none" stroke="#082f49" stroke-width="2" stroke-linecap="round" />
+    <path d="M4,-136 Q14,-130 24,-136" fill="none" stroke="#082f49" stroke-width="2" stroke-linecap="round" />
+    <path d="M-8,-118 Q0,-112 8,-118" fill="none" stroke="#082f49" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 6. TRISHUL WITH DAMARUKAM (Standing majestically in snow on right)  -->
+  <!-- =================================================================== -->
+  <g transform="translate(1120, 360)" filter="url(#divineGlow)">
+    <!-- Base planted firmly in the snow -->
+    <ellipse cx="0" cy="400" rx="35" ry="12" fill="#0f172a" opacity="0.5" />
+
+    <!-- Trishul Shaft -->
+    <rect x="-6" y="-60" width="12" height="460" rx="3" fill="url(#goldMat)" />
+
+    <!-- Central Pointed Spear -->
+    <polygon points="-8,-60 8,-60 0,-180" fill="url(#goldMat)" />
+    <!-- Outer Curved Prongs -->
+    <path d="M-8,-50 C-60,-50 -80,-110 -75,-160 C-65,-120 -35,-80 -5,-75 Z" fill="url(#goldMat)" />
+    <path d="M8,-50 C60,-50 80,-110 75,-160 C65,-120 35,-80 5,-75 Z" fill="url(#goldMat)" />
+
+    <!-- Sacred Damru tied to the Shaft -->
+    <g transform="translate(0, 40)">
+      <!-- Left Cone -->
+      <polygon points="-35,-20 0,0 -35,20" fill="#78350f" stroke="#f59e0b" stroke-width="2" />
+      <ellipse cx="-35" cy="0" rx="6" ry="20" fill="#fef3c7" stroke="#92400e" stroke-width="1.5" />
+      <!-- Right Cone -->
+      <polygon points="35,-20 0,0 35,20" fill="#78350f" stroke="#f59e0b" stroke-width="2" />
+      <ellipse cx="35" cy="0" rx="6" ry="20" fill="#fef3c7" stroke="#92400e" stroke-width="1.5" />
+      <!-- Cross Strings -->
+      <line x1="-35" y1="-15" x2="35" y2="15" stroke="#fbbf24" stroke-width="1.5" />
+      <line x1="-35" y1="15" x2="35" y2="-15" stroke="#fbbf24" stroke-width="1.5" />
+      <!-- Red Sacred Center Tie Band & Ribbons fluttering in Himalayan breeze -->
+      <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#dc2626" />
+      <path d="M0,6 Q-25,35 -15,70" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+      <path d="M0,6 Q20,40 10,75" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Foreground Sacred Mist / Snow Flurries -->
+  <ellipse cx="800" cy="950" rx="800" ry="100" fill="#38bdf8" opacity="0.12" />
+</svg>

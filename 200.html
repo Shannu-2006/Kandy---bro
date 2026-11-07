@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Karthik – A Divine Birthday Experience 🔱</title>
+  
+  <meta name="description" content="A divine, cinematic birthday experience dedicated to Karthik, devotee of Lord Shiva." />
+  <meta name="theme-color" content="#02040a" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- GSAP Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Cosmic Particle Canvas -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <!-- Cosmic Ambient Glow Layers -->
+  <div class="cosmic-atmosphere"></div>
+
+  <!-- Trishul Impact Flash Layer -->
+  <div id="impact-flash" class="impact-flash"></div>
+
+  <!-- Background Devotional Audio Element -->
+  <audio id="bg-audio" preload="auto" loop></audio>
+
+  <!-- Floating Audio Controller -->
+  <header class="audio-controller-wrapper">
+    <button id="audio-toggle-btn" class="audio-btn" type="button" title="Toggle Devotional Music">
+      <div class="audio-equalizer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <span id="audio-status-text">Music 🎵</span>
+    </button>
+    <input 
+      type="range" 
+      id="audio-volume-slider" 
+      class="audio-volume-slider" 
+      min="0" 
+      max="1" 
+      step="0.05" 
+      value="0.7" 
+      title="Volume Control" 
+    />
+  </header>
+
+  <!-- Main Website Container -->
+  <main id="app-container">
+
+    <!-- ================================================================= -->
+    <!-- PAGE ONE: THE DIVINE TRISHUL ENTRANCE                             -->
+    <!-- ================================================================= -->
+    <section id="page-one" class="page-view">
+      
+      <!-- Trishul Stage -->
+      <div class="trishul-stage">
+        <!-- Glowing Divine Aura behind Trishul -->
+        <div id="trishul-aura" class="trishul-divine-aura"></div>
+
+        <!-- Lord Shiva's Trishul Image Element (Isolated Transparent Trishul) -->
+        <img 
+          id="trishul-img" 
+          class="trishul-element" 
+          src="assets/images/trishul.png" 
+          onerror="this.onerror=null;this.src='assets/images/trishul.svg';" 
+          alt="Lord Shiva's Sacred Trishul" 
+          title="Press the Trishul to witness Mahadev's presence"
+        />
+      </div>
+
+      <!-- Entrance Text Content (Revealed after Trishul Impact) -->
+      <div id="entrance-content" class="entrance-content">
+        <!-- Single Clean Box -->
+        <div class="divine-message-card">
+          <p class="custom-message-text" id="custom-message-text">
+            Press the Trishul to witness the divine presence of Mahadev...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- PAGE TWO: LORD SHIVA DIVINE BLESSINGS                             -->
+    <!-- ================================================================= -->
+    <section id="page-two" class="page-view" style="display: none;">
+      
+      <!-- Top Devotional Badge -->
+      <div class="shiva-mala-badge stagger-reveal" id="shiva-mala-badge">
+        🔱 MY BLESSINGS ARE ALWAYS WITH YOU 🔱
+      </div>
+
+      <!-- Hero Visual Showcase: Lord Shiva on Mount Kailash with Nandi & Trishul -->
+      <div class="shiva-hero-showcase stagger-reveal">
+        <div class="shiva-visual-frame" id="shiva-visual-frame">
+          <!-- Graceful Video Loading Screen -->
+          <div id="video-loader" class="video-loader">
+            <div class="divine-spinner"></div>
+            <span>Revealing Mahadev's Divine Darshan...</span>
+          </div>
+
+          <!-- Main Video (mahadev_edited.mp4) -->
+          <video 
+            id="shiva-video-bg" 
+            class="shiva-video-bg" 
+            src="assets/media/mahadev_edited.mp4" 
+            playsinline 
+            muted 
+            loop 
+            autoplay
+          ></video>
+          
+          <!-- Image: Lord Shiva in Mount Kailash with Nandi, Snake & Trishul with Damru -->
+          <img 
+            id="shiva-image-bg" 
+            class="shiva-image-bg" 
+            src="assets/images/shiva.jpg" 
+            onerror="this.onerror=null;this.src='assets/images/shiva.svg';" 
+            alt="Lord Shiva sitting peacefully in Mount Kailash with Nandi and Trishul" 
+          />
+        </div>
+
+        <!-- Scroll Down to Message Indicator -->
+        <div class="scroll-down-indicator" id="scroll-to-message">
+          <span>Scroll Down for Mahadev's Blessings</span>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </div>
+
+      <!-- Blessings Content Down Below the Visual -->
+      <div class="blessings-content" id="blessings-content-section">
+
+        <!-- Main Birthday Header Card -->
+        <div class="main-birthday-card stagger-reveal">
+          <h1 class="main-birthday-title" id="main-birthday-title">
+            Happy Birthday, Karthik! ❤️
+          </h1>
+        </div>
+
+        <!-- Mahadev's Divine Letter Card -->
+        <div class="divine-letter-card stagger-reveal">
+          
+          <!-- Salutation -->
+          <div class="divine-salutation blessing-para-reveal" id="divine-salutation">
+            My child,
+          </div>
+
+          <!-- Paragraphs revealed one at a time -->
+          <p class="divine-body-para blessing-para-reveal" id="para-1">
+            Always be strong, no matter how difficult life becomes. Never lose your courage and never give up on your dreams.
+          </p>
+
+          <p class="divine-body-para blessing-para-reveal" id="para-2">
+            There may be times when you feel lost or alone, but keep your faith and keep moving forward.
+          </p>
+
+          <p class="divine-body-para blessing-para-reveal" id="para-3">
+            Don't be afraid of challenges. Every difficult moment will make you stronger.
+          </p>
+
+          <p class="divine-body-para blessing-para-reveal" id="para-4">
+            May your life be filled with happiness, peace, good health and success.
+          </p>
+
+          <!-- Core Highlighted Blessing -->
+          <div class="divine-core-blessing blessing-para-reveal" id="core-blessing">
+            Walk with faith, live with courage, and remember that my blessings are always with you.
+          </div>
+
+          <!-- Final Sacred Mantra Card -->
+          <div class="divine-final-mantra blessing-para-reveal" id="final-mantra">
+            Om Namah Shivaya! 🔱
+          </div>
+
+        </div>
+
+        <!-- Page 2 to Page 3 Navigation Arrow -->
+        <div class="nav-arrow-wrapper stagger-reveal blessing-para-reveal">
+          <button id="to-page-three-btn" class="nav-arrow-btn nav-arrow-right" type="button" aria-label="Go to Page 3" title="Next">
+            <span class="arrow-symbol">→</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Left Screen Return to Trishul Button -->
+      <button id="left-screen-back" class="left-screen-back" title="Tap to return to Trishul">
+        <span class="back-arrow">‹</span>
+        <span class="back-label">Trishul</span>
+      </button>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- PAGE THREE: MAHADEV'S PROMISE – ALWAYS BY YOUR SIDE               -->
+    <!-- ================================================================= -->
+    <section id="page-three" class="page-view" style="display: none;">
+      
+      <!-- Page 3 Heading: IT'S MY PROMISE TO YOU -->
+      <h1 class="page3-title page3-reveal" id="page3-badge">
+        IT'S MY PROMISE TO YOU
+      </h1>
+
+      <!-- Main Showcase Container for Page 3 -->
+      <div class="promise-showcase-container">
+        
+        <!-- Sacred Image Frame: Devotee holding Lord Shiva's divine hand -->
+        <div class="promise-image-frame page3-reveal" id="promise-image-frame">
+          <div class="promise-image-aura"></div>
+          <img 
+            id="page3-hero-img" 
+            class="promise-hero-img" 
+            src="assets/images/mahadev_hand_hold.png" 
+            alt="Lord Mahadev holding devotee's hand" 
+          />
+        </div>
+
+        <!-- Emotional Message Card -->
+        <div class="promise-letter-card page3-reveal" id="promise-letter-card">
+          
+          <!-- Salutation -->
+          <div class="promise-salutation page3-para-reveal" id="page3-salutation">
+            My child,
+          </div>
+
+          <!-- Paragraph 1 -->
+          <p class="promise-para page3-para-reveal" id="page3-para-1">
+            Whenever you feel weak, remember that you don't have to face everything alone.
+          </p>
+
+          <!-- Paragraph 2 with highlighted phrase -->
+          <p class="promise-para page3-para-reveal" id="page3-para-2">
+            When your path becomes difficult, <span class="gold-highlight">I will hold your hand</span>. When you lose your way, I will guide you. When your heart feels heavy, I will give you peace.
+          </p>
+
+          <!-- Paragraph 3 -->
+          <p class="promise-para page3-para-reveal" id="page3-para-3">
+            You may not always see me, but never doubt that my blessings are always with you.
+          </p>
+
+          <!-- Core Climax Blessing -->
+          <div class="promise-climax-text page3-para-reveal" id="page3-climax">
+            Keep walking, my child. I am always by your side.
+          </div>
+
+          <!-- Final Sacred Mantra -->
+          <div class="promise-final-mantra page3-para-reveal" id="page3-mantra">
+            Om Namah Shivaya. 🔱
+          </div>
+
+        </div>
+
+        <!-- Page 3 to Page 2 Navigation Arrow -->
+        <div class="nav-arrow-wrapper page3-reveal">
+          <button id="page3-back-btn" class="nav-arrow-btn nav-arrow-left" type="button" aria-label="Return to Page 2" title="Previous">
+            <span class="arrow-symbol">←</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Left Screen Return to Page 2 Button -->
+      <button id="page3-left-back" class="left-screen-back" title="Tap to return to Page 2">
+        <span class="back-arrow">‹</span>
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
